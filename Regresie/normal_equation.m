@@ -2,12 +2,8 @@ function [Theta] = normal_equation(FeaturesMatrix, Y, tol, iter)
     [rows cols] = size(FeaturesMatrix);
     Theta = zeros(cols, 1);
     
-    if rows != cols
-        return
-    endif
-    
     %testam daca matricea e pozitiv def
-    eigvals = eig(FeaturesMatrix);
+    eigvals = eig(FeaturesMatrix' * FeaturesMatrix);
     if !all(eigvals > 0)
         return
     endif

@@ -1,6 +1,6 @@
 function [Theta] = gradient_descent(FeatureMatrix, Y, n, m, alpha, iter)
     [rows cols] = size(FeatureMatrix);
-    Theta = zeros(m, 1);
+    Theta = zeros(cols, 1);
     
     k = 1;
     while k < iter
@@ -9,7 +9,7 @@ function [Theta] = gradient_descent(FeatureMatrix, Y, n, m, alpha, iter)
             for i = 1 : rows
                 grd = grd + FeatureMatrix(i, j) * (Theta' * FeatureMatrix(i, :)' - Y(i, 1));
             endfor
-            grd = grd ./rows;
+            grd = grd /rows;
             Theta(j, 1) = Theta(j, 1) - alpha * grd;;
         endfor
         k = k + 1;
