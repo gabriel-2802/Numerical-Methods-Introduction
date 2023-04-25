@@ -9,4 +9,5 @@ function [Theta] = normal_equation(FeaturesMatrix, Y, tol, iter)
     endif
     
     Theta = gradient_function(FeaturesMatrix' * FeaturesMatrix, FeaturesMatrix' * Y, Theta, tol, iter);
+    Theta = [0; Theta];
 endfunction

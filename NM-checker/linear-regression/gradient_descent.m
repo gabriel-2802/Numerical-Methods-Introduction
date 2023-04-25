@@ -14,6 +14,7 @@ function [Theta] = gradient_descent(FeatureMatrix, Y, n, m, alpha, iter)
         endfor
         k = k + 1;
     endwhile
+    Theta = [0; Theta];
     
     
     
