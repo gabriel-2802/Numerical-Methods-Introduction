@@ -1,0 +1,4 @@
+error: linear_regression_cost_function: operator *: nonconformant arguments (op1 is 1x401, op2 is 400x1)
+error: called from
+    linear_regression_cost_function at line 5 column 15
+    run_test at line 7 column 13
