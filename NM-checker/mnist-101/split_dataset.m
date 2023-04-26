@@ -1,14 +1,15 @@
 function [X_train, y_train, X_test, y_test] = split_dataset(X, y, percent)
-  % X -> the loaded dataset with all training examples
-  % y -> the corresponding labels
-  % percent -> fraction of training examples to be put in training dataset
   
-  % X_[train|test] -> the datasets for training and test respectively
-  % y_[train|test] -> the corresponding labels
+  data = [y X];
+  data = data(randperm(length(X)), :);
   
-  % Example: [X, y] has 1000 training examples with labels and percent = 0.85
-  %           -> X_train will have 850 examples
-  %           -> X_test will have the other 150 examples
-
-  % TODO: split_dataset implementation
+  train_samples = floor(percent * length(data));
+  train_data = data(1:train_samples, :);
+  test_data = data((train_samples + 1):end, :);
+  
+  X_train = train_data(:,2:end);
+  y_train = train_data(:, 1);
+  
+  X_test = test_data(:, 2:end);
+  y_test = test_data(:, 1);
 endfunction

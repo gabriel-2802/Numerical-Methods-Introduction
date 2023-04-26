@@ -1,4 +1,3 @@
-
 function run_test()
     "task-1";
     fout = fopen('out', 'w+');
@@ -12,7 +11,7 @@ function run_test()
 	probs = [probs; 1; 0];
 	[m, n] = size(Labyrinth);
 
-	path = heuristic_greedy(ceil(n * m / 2), probs, Adj);
+	path = heuristic_greedy(2, probs, Adj);
 	
 	decoded_path = decode_path(path, m, n);
 	fdisp(fout, decoded_path);

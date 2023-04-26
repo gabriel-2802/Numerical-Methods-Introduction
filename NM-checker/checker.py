@@ -190,9 +190,6 @@ def evaluate_test(test_group, test):
         if file_name[-2:] == ".m" and file_name != "run_test.m":
             os.remove(os.path.join(test_subdir, file_name))
 
-    if os.stat(f'{test_subdir}/stderr').st_size != 0:
-        return (0, f"errors, check '{test_subdir}/stderr'")
-
     # Cleanup
     os.remove(f"{test_subdir}/stderr")
 

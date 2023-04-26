@@ -1,7 +1,14 @@
 function [J, grad] = cost_function(params, X, y, lambda, ...
                    input_layer_size, hidden_layer_size, ...
                    output_layer_size)
-
+   
+   theta1_size = [hidden_layer_size, input_layer_size + 1];
+   theta2_size = [output_layer_size, hidden_layer)size + 1];
+   
+   theta1 = reshape(params(1 : prod(theta1_size), theta1_size(1), theta1_size(2));
+   theta2 = reshape(params((prod(theta1_size + 1) + 1) : end), theta2_size(1), theta2_size(2));
+   
+   
   % params -> vector containing the weights from the two matrices
   %           Theta1 and Theta2 in an unrolled form (as a column vector)
   % X -> the feature matrix containing the training examples

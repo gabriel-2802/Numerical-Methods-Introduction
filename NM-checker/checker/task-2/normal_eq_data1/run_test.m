@@ -3,7 +3,7 @@ function run_test()
     "task-3";
     fout = fopen("out", "w+");
     load("../../input/task2/normal_eq1");
-
+    
     tol = 1e-10;
     max_iter = 200;
 

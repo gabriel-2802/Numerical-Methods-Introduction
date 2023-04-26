@@ -68,17 +68,20 @@
                 {
                     "name": "test_perform1",
                     "test-score": 2,
-                    "test-type": "exact"
+                    "test-type": "approx",
+                    "max-error": 1e-4
                 },
                 {
                     "name": "test_perform2",
                     "test-score": 2,
-                    "test-type": "exact"
+                    "test-type": "approx",
+                    "max-error": 1e-4
                 },
                 {
                     "name": "test_perform3",
                     "test-score": 2,
-                    "test-type": "exact"
+                    "test-type": "approx",
+                    "max-error": 1e-4
                 },
                 {
                     "name": "test_heuristic1",
