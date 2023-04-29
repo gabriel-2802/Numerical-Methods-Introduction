@@ -5,6 +5,7 @@ function [Theta] = normal_equation(FeaturesMatrix, Y, tol, iter)
     %testam daca matricea e pozitiv def
     eigvals = eig(FeaturesMatrix' * FeaturesMatrix);
     if !all(eigvals > 0)
+        Theta = [0; Theta];
         return
     endif
     

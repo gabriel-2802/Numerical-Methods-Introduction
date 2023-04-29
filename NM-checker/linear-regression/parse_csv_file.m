@@ -1,4 +1,4 @@
-function [Y InitialMatrix] = parse_csv_file(file_path)
+function [Y, InitialMatrix] = parse_csv_file(file_path)
     fid = fopen(file_path, 'r');
     line = fgetl(fid);
     data = textscan(fid, '%s', 'delimiter', '\n');
